@@ -18,4 +18,20 @@ public class MyStepdefs {
         value1 = arg0;
         value2 = arg1;
     }
+
+    @And("^An operator ([*/^])$")
+    public void anOperator(char opt) {
+        operator = opt;
+    }
+
+    @When("^I perform the calculation$")
+    public void iPerformTheCalculation() {
+        calculator = new Calculator();
+        result = calculator.calculate(value1, value2, operator);
+    }
+
+    @Then("^I expect the result (-?\\d+)$")
+    public void iExpectTheResult(int arg0) {
+        Assert.assertEquals(arg0, result);
+    }
 }
