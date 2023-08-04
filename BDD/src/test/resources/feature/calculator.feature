@@ -16,3 +16,10 @@ Feature: Calculator
     And I enter the second number 3
     And I choose the operator /
     Then I should see the result 3
+
+  Scenario: Perform exponentiation
+    Given I have a calculator
+    When I enter the base number 2
+    And I enter the exponent 3
+    And I choose the operator ^
+    Then I should see the result 8
