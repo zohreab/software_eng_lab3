@@ -1,7 +1,11 @@
 @tag
 Feature: Calculator
 
-  
+  Scenario: Multiply two numbers
+    Given Two input values, 6 and 2
+    And An operator *
+    When I perform the calculation
+    Then I expect the result 12
 
   Scenario: Perform division
     Given I have a calculator
