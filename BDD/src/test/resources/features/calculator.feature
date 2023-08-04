@@ -28,6 +28,6 @@ Feature: Calculator
 
     Examples:
       | first | second | opt | result |
-      | 10    | 2      | *   | 20     |
-      | 9     | 3      | /   | 3      |
-      | 5     | 3      | ^   | 125    |
+      | -10   |  2     | *   | -20    |
+      | 9     |  3     | /   | 3      |
+      | 5     |  3     | ^   | 125    |

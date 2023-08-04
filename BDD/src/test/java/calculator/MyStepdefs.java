@@ -1,11 +1,16 @@
 package calculator;
 
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+
 public class MyStepdefs {
+
+    @Before
+    public void before(){calculator = new Calculator();}
 
     private Calculator calculator;
     private int value1;
@@ -26,7 +31,7 @@ public class MyStepdefs {
 
     @When("^I perform the calculation$")
     public void iPerformTheCalculation() {
-        calculator = new Calculator();
+
         result = calculator.calculate(value1, value2, operator);
     }
 
